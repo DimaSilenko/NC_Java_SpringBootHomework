@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Send</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/mystyle.css}">
+</head>
+<body>
+
+<h1>Send email</h1>
+<h2 th:text="${user.firstName + ' ' + user.lastName}"></h2>
+<form action="#" th:action="@{/send}" th:object="${email}" method="post">
+    <p> ToAddress <input type="text" , readonly th:field="*{toAddress}"></p>
+    <p>Subject <input type="text" th:field="*{subject}"/></p>
+    <p>Text <textarea rows="10" cols=50 th:field="*{massage}"></textarea></p>
+    <p><input class="buttons" type="submit" value="Send"/> <input class="buttons" type="reset" value="Reset"/></p>
+    <h3 th:text="${message}" th:if="${message ne null}"></h3>
+</form>
+
+<a href="/">Choose another option</a>
+</body>
+</html>

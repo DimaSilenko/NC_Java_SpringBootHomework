@@ -1,0 +1,5 @@
+Dima|Silenko|Igorevich|22|17985.0|mymail@mail.ru|NetCracker
+Test|Testiy|Testovich|45|89990.0|test@gmail.com|TestCompany
+Artem|Ivanov|Petrovich|33|96993.333|aip@yandex.ru|BestCompany
+fast|find|example|99|99999.99|findquick@yandex.ru|MyCompany
+John|Doe|Somebody|54|50000.0|doej90341@gmail.com|JohnDoeInc

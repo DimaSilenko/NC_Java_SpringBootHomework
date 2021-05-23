@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>info</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/mystyle.css}">
+</head>
+<body>
+<h1>Information about your user:</h1>
+
+<p th:text="'First Name: ' + ${findUser.firstName}"></p>
+<p th:text="'Last Name: ' + ${findUser.lastName}"></p>
+<p th:text="'Patronymic: ' + ${findUser.patronymic}"></p>
+<p th:text="'Age: ' + ${findUser.age}"></p>
+<p th:text="'Salary: ' + ${findUser.salary}"></p>
+<p th:text="'Email: ' + ${findUser.email}"></p>
+<p th:text="'Company Name: ' + ${findUser.company}"></p>
+
+<p th:text="'Current time: ' + ${#temporals.format(localDateTime, 'dd-MM-yyyy HH:mm')}"></p>
+<p th:text="'Current user-agent: ' + ${#httpServletRequest.getHeader('User-Agent')}"></p>
+
+<p><a href="/send" th:href="@{/send(firstName=${findUser.firstName},
+                                     lastName=${findUser.lastName}}">Send an email to this user</a></p>
+<p><a href="/">Choose another option</a></p>
+
+</body>
+</html>

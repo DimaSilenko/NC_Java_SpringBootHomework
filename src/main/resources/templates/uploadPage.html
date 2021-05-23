@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Uploading</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/mystyle.css}">
+</head>
+<body>
+<h1>Upload user or users from the file</h1>
+
+<h2>Please, respect the following rules:</h2>
+
+<p>Format of each line in the file: <br>
+    firstName|lastName|patronymic|age|salary|email|company <br>
+    Example: <br>
+    Dima|Silenko|Igorevich|22|17985.0|mymail@mail.ru|NetCracker <br>
+    Requirements for each item to pass validation check:
+<ol>
+    <li>firstName - not empty, only english words and 1-30 symbols</li>
+    <li>lastName - not empty, only english words and 1-30 symbols</li>
+    <li>patronymic - not empty, only english words and 1-30 symbols</li>
+    <li>age - from 18 to 100 years</li>
+    <li>salary - more, then 12800</li>
+    <li>email - not empty, style like normal email</li>
+    <li>company - not empty, only english words and 1-30 symbols</li>
+</ol>
+<br>
+If you do something wrong it will be on your hand!
+</p>
+
+<form action="/upload" enctype="multipart/form-data" method="post">
+    <p>Your File:</p>
+    <input th:type="file" name="file"/>
+    <input class="buttons" th:type="submit" value="upload"/>
+    <h3 th:text="${message}" th:if="${message ne null}"></h3>
+</form>
+
+
+<a href="/">Choose another option</a>
+</body>
+</html>
