@@ -34,7 +34,7 @@ public class EmailController {
         defaultEmailService.sendSimpleEmail(emailContent.getToAddress(),
                 emailContent.getSubject(),
                 emailContent.getMassage());
-        attributes.addFlashAttribute("message", "You successfully send an email!");
-        return "redirect:/send";
+
+        return "goodResult";
     }
 }

@@ -13,6 +13,7 @@ public class DefaultEmailService {
 
     public void sendSimpleEmail(String toAddress, String subject, String massage) {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+        simpleMailMessage.setFrom("doej90341@gmail.com");
         simpleMailMessage.setTo(toAddress);
         simpleMailMessage.setSubject(subject);
         simpleMailMessage.setText(massage);
