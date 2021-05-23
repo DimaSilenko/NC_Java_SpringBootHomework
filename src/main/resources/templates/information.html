@@ -20,7 +20,7 @@
 <p th:text="'Current user-agent: ' + ${#httpServletRequest.getHeader('User-Agent')}"></p>
 
 <p><a href="/send" th:href="@{/send(firstName=${findUser.firstName},
-                                     lastName=${findUser.lastName}}">Send an email to this user</a></p>
+                                     lastName=${findUser.lastName})}">Send an email to this user</a></p>
 <p><a href="/">Choose another option</a></p>
 
 </body>
